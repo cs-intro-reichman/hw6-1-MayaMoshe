@@ -125,7 +125,7 @@ public class Runigram {
 		Color [][] newImage = new Color[image.length][image[0].length];
 		for(int i=0; i<image.length;i++){
 			for(int j=0;j<image[0].length;j++){
-				image[i][j]=luminance(image[i][j]);
+				newImage[i][j]=luminance(image[i][j]);
 			}
 		}
 		return newImage;
@@ -141,9 +141,9 @@ public class Runigram {
 		int oldR = image.length;
 		int oldC = image[0].length;
 		for(int i=0;i<height;i++){
+			int oldRow = i*oldR/height;
 			for(int j=0;j<width;j++){
-				oldR = i*oldR/height;
-				oldC = j*oldC/width;	
+				int oldCol = j*oldC/width;	
 				newImage[i][j]=image[oldR][oldC];
 			}
 		}
