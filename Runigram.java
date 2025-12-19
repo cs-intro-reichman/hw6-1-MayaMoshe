@@ -144,7 +144,7 @@ public class Runigram {
 			int oldRow = i*oldR/height;
 			for(int j=0;j<width;j++){
 				int oldCol = j*oldC/width;	
-				newImage[i][j]=image[oldR][oldC];
+				newImage[i][j]=image[oldRow][oldCol];
 			}
 		}
 		
